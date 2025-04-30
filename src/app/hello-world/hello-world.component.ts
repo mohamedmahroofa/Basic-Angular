@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './hello-world.component.html',
-  styleUrl: './hello-world.component.css'
+  styleUrl: './hello-world.component.css',
 })
 export class HelloWorldComponent {
-
+  message = 'Hello, Angular';
 }
