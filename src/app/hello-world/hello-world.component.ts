@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HelloWorldComponent {
   message = 'Hello, Angular';
+
+  changeMessage() {
+    this.message = 'You have clicked this button';
+  }
+
+  resetMessage() {
+    this.message = 'Hello, Angular';
+  }
 }
