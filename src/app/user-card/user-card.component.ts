@@ -9,8 +9,9 @@ import { Component } from '@angular/core';
 })
 export class UserCardComponent {
   userName: string = 'Ahmed Sheedh Mohamed Mahroof';
+  email: string = 'ahm.sheedh@gmail.com';
 
   showMessage() {
-    alert(`Hello ${this.userName}. This is your Profile`);
+    alert(`Hello ${this.userName}. Profile: ${this.email}`);
   }
 }
