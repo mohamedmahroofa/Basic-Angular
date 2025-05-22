@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-card',
@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './user-card.component.css',
 })
 export class UserCardComponent {
-  userName: string = 'Ahmed Sheedh Mohamed Mahroof';
-  email: string = 'ahm.sheedh@gmail.com';
+  @Input() userName: string = '';
+  @Input() email: string = '';
 
   showMessage() {
-    alert(`Hello ${this.userName}. Profile: ${this.email}`);
+    alert(`Hello ${this.userName}! Profile: ${this.email}`);
   }
 }
