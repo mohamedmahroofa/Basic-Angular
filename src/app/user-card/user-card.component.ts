@@ -1,5 +1,11 @@
 import { Component, Input } from '@angular/core';
 
+interface User {
+  name: string;
+  email: string;
+  age: number;
+}
+
 @Component({
   selector: 'app-user-card',
   standalone: true,
@@ -8,10 +14,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './user-card.component.css',
 })
 export class UserCardComponent {
-  @Input() userName: string = '';
-  @Input() email: string = '';
+  @Input() user: User = { name: '', email: '', age: 0 };
 
   showMessage() {
-    alert(`Hello ${this.userName}! Profile: ${this.email}`);
+    alert(`User: ${this.user.name}. Profile: ${this.user.email}`);
   }
 }
